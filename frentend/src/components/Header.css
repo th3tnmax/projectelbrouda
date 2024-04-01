@@ -1,0 +1,67 @@
+.header {
+    background: #ECF1F4;
+
+
+
+}
+
+.site-logo {
+    width: 80%;
+    margin-top: 0;
+    height: auto;
+}
+
+.navigateur {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.navigateur ul {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+    
+}
+
+.navigateur ul li {
+    list-style-type: none;
+    color: #767672;
+}
+
+#join {
+    color: white;
+}
+
+#btn {
+    background: linear-gradient(135deg, #23C5E5 0%, #1C409B 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 9%;
+}
+#btn a{
+    color:white;
+}
+
+.list-item:visited {
+    color:black;
+    
+
+}
+
+#btn :visited {
+    color: white;
+    text-decoration: none;
+}
+#home:visited{
+    color: #1C409B;
+
+}
+.navigateur ul li a{
+     color: #767672;
+     text-decoration: none;
+
+}
+.list-item:hover{
+    text-decoration: underline solid #1C409B 2px;
+}
