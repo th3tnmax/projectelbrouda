@@ -1,0 +1,62 @@
+footer{
+    margin:0;
+    padding:0;
+   background: #F8F9FB;
+    
+}
+footer div {
+    padding: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer div img {
+    width: 20%;
+    height: auto;
+}
+footer div ul {
+    list-style-type: none;
+}
+.footer-headers{
+    
+font-family: 'Poppins';
+font-style: normal;
+
+font-size: 24px;
+
+font-style: bold;
+
+
+color: #27292D;
+}
+.copyright{
+    margin:0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.copyright p{
+    margin:0;
+    
+    padding:0;
+}
+footer hr{
+    width: 75%;
+} 
+.copyright div{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.photo-insta{
+    width: 50%;
+    height: auto;
+    margin-left:50%
+}
+.photo-fb{
+    width: 30%;
+    height: auto;
+}

@@ -1,0 +1,268 @@
+.home {
+    background: #ECF1F4;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10%;
+    padding-bottom: 5%;
+}
+
+.photo {
+    width: 80%;
+    height: auto;
+    margin-right: 10%;
+}
+
+.parag {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 3%;
+    width: 100%;
+    margin-top: 6em;
+
+}
+
+.vous {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 19px;
+    width: 150%;
+
+    color: #767672;
+}
+
+.rejoindre {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 40px;
+    line-height: 50px;
+    margin: 5px;
+    color: #27292D;
+}
+
+.searchPhoto {
+    width: 10%;
+    height: auto;
+}
+
+.search {
+    margin-top: 4em;
+    width: 400px;
+    height: 20px;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.searchInput {
+    border: none;
+}
+
+.buttonSerach {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 15px;
+
+    justify-content: flex-end;
+    border: none;
+    height: 150%;
+    width: 100%;
+    color: white;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #23C5E5 0%, #1C409B 100%);
+}
+
+.decourvrir-text {
+    width: em;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 63px;
+    margin-left: 2em;
+}
+
+.cours-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-item {
+    width: 9em;
+    height: 11em;
+    border-radius: 8px;
+    background: #F5F5F5;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+
+.gestion {
+    background: linear-gradient(135deg, #23C5E5 0%, #1C409B 100%);
+    color: white;
+
+}
+
+.ecoimg {
+    width: 50%;
+    height: 50%;
+}
+
+.decouvrir-cours {
+    height: 22em;
+}
+
+.processus {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    background-repeat:round;
+    background-size:contain;
+    background-image: url(../../public/assets/pictures/Path.png);
+}
+
+.first {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.processus-header {
+    margin: 0;
+
+    width: 100%;
+    font-family: 'Poppins';
+    font-style: normal;
+
+    font-size: 30px;
+
+    color: white;
+}
+
+.processus-picture {
+    width: 105%;
+    height: auto;
+    border-radius: 5%;
+    margin-top: 5%;
+
+}
+
+.second {
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+
+}
+
+.para-table {
+    font-family: 'Open Sans';
+    font-style: normal;
+
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.num {
+    font-family: 'Poppins';
+    font-style: normal;
+    width: 20%;
+    font-size: 46px;
+    line-height: 69px;
+}
+
+.img-cours-grat {
+    width: 100%;
+    height: auto;
+
+}
+
+.cours-gratuits {
+    margin-left: 5%;
+}
+
+.cours-container-grid {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 20% 23% 23% 23%;
+    grid-column-gap: 3%;
+    grid-row-gap: 5%;
+}
+
+.cours-container-grid ul li {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 20px;
+    color: #27292D;
+
+}
+
+#tous {
+    width: 60%;
+    color:white ;
+
+    border-start-end-radius:50px ;
+    border-end-end-radius: 50px;
+    background: linear-gradient(135deg, #23C5E5 0%, #1C409B 100%);
+    padding: 5%;
+}
+
+.cours-container-grid ul {
+    grid-row: span 2;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../../public/assets/pictures/Path\ 97.png);
+}
+
+.cours-name {
+    padding: 1%;
+    width: 40%;
+    background-color: #c9f6ff;
+    display: flex;
+    border-radius: 6%;
+
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.cours-name p {
+    margin: 0;
+    color: #6E7A87
+}
+.temps{
+    gap: 5%;
+    padding: 5%;
+    margin :10%;
+    background: #0A244B;
+    border-radius: 20px;
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+    color :white;
+    background-image: url(../../public/assets/pictures/image\ 18.png) opacity(0.15);
+
+}
+
+.temps div button {
+    border-radius: 10px;
+    background: linear-gradient(135deg, #23C5E5 0%, #1C409B 100%);
+    border: none;
+    color:white;
+    padding: 2%;
+}
