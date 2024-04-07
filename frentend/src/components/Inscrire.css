@@ -1,0 +1,128 @@
+.inscrit-container {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    background: #F8F9FB;
+    width: 100%;
+    height: 100%;
+}
+
+.inscrit-first {
+    margin-top: 2%;
+    display: flex;
+    margin-left: 10%;
+    flex-direction: column;
+
+}
+
+.logo-connect {
+    margin: 0;
+    padding: 0;
+    width: 30%;
+
+    height: auto;
+}
+
+.inscrit-first form input {
+    width: 80%;
+
+    margin-top: 3%;
+    padding: 2%;
+    border-radius: 15px;
+    border: 1px solid #CCCCCC;
+}
+
+.inscrit-first form button {
+    padding: 2%;
+    color: white;
+    background: linear-gradient(180deg, #23C5E5 0%, #1C409B 100%);
+    border: none;
+    width: 40%;
+    border-radius: 10px;
+    margin-top: 3%;
+}
+
+
+.inscrit-first input:focus{
+    outline: none;
+
+}
+
+
+.inscrire-text a {
+    color: #1C80C6;
+
+
+
+}
+
+p {
+    margin: 1%;
+    padding: 0;
+}
+
+.inscrire-google {
+    display: flex;
+    background:rgb(255, 251, 251);
+    border: #1C409B 0.7px solid;
+    width: 40%;
+    height: 10%;
+    border-radius: 15px;
+    color: #1C409B;
+    align-items: center;
+    gap: 2%;
+    padding: 1.5%;
+    font-family: Poppins;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+.inscrire-google:hover{
+    color:white;
+    background: linear-gradient(180deg, #23C5E5 0%, #1C409B 100%);
+    border: white solid 0.7px;
+
+    
+}
+
+.inscrit-second {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../public/assets/pictures/image35.png);
+    width: 100%;
+    height: auto;
+    border: none;
+}
+
+
+.endroit {
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3%;
+    width: 70%;
+    border-radius: 20px;
+    height: 25%;
+    background: #FFFFFF;
+    opacity: 0.8;
+    backdrop-filter: blur(60px);
+}
+
+.text-inscrit {
+    color: #404145;
+
+    opacity: 0.8;
+    
+}
+.inscrit-first label{
+    margin-top: 1%;
+}

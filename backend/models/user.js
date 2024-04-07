@@ -2,14 +2,28 @@
 const mongoose = require('mongoose');
 
 const User = mongoose.model('User', {
+
+    id:{
+        type:Number,
+        //required:true,
+        default:0,
+        min:0,
+    },
     name: {
-        type : String
+        type : String,
+        required:true
     },
     lastname: {
-        type : String
+        type : String,
+        required:true
     },
-    age: {
-        type : Number
+    birthDate:{
+        type:Date,
+        //required:true
+    },
+    tel:{
+        type:Number,
+        //required:true,
     },
     email: {
         type : String
@@ -17,17 +31,34 @@ const User = mongoose.model('User', {
     password: {
         type : String
     },
+    url:{
+        type:String,
+        //required:true,
+    },
     subscriber: {
-        type : Boolean
+        type : Boolean,
+        //required:true,
+        default:false
     },
     follower :{
-        type : Boolean
+        type : Boolean,
+        //required:true,
+        default:false
     },
     teacher: {
-        type : Boolean
+        type : Boolean,
+        //required:true,
+        default:false
     },
     admin : {
-        type : Boolean
+        type : Boolean,
+        //required:true,
+        default:false
+    },
+    paid:{
+        type:Boolean,
+        //required:true,
+        default:false,
     }
     
 })

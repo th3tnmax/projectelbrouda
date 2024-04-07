@@ -4,7 +4,7 @@ import Home from '../components/Home';
 import Footer from '../components/Footer';
 
 
-const homepage = () => {
+const Homepage = () => {
   return (
     <>
     <Header/>
@@ -14,4 +14,4 @@ const homepage = () => {
   )
 }
 
-export default homepage
+export default Homepage

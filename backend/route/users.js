@@ -5,9 +5,13 @@ const router = express.Router();
 
 const User =require("../models/user");
 
+const bcrypt =require('bcrypt');
+const jwt = require('jsonwebtoken');
+
 //post
 router.post('/register',async(req, res)=>{
     try {
+        salt = bcrypt.genSaltSync(10);
         if (!req.body.name || 
             !req.body.lastname ||
             !req.body.email ||
@@ -23,6 +27,8 @@ router.post('/register',async(req, res)=>{
             email :req.body.email,
             password :  req.body.password
         };
+        passwordcryted = await bcrypt.hashSync(newUser.password , salt);
+        newUser.password=passwordcryted;
         const user = await User.create(newUser);
         res.status(201).send(user);
 
@@ -30,6 +36,41 @@ router.post('/register',async(req, res)=>{
         res.status(500).send(error);
     }
 });
+
+//login 
+
+router.post('/login',async(req ,res)=>{
+
+    if (!req.body.email ||
+        !req.body.password 
+        ) {
+            return res.status(400).send({
+                message : "fill all requred fields : email , password "
+            });
+    }
+
+    user = await User.findOne({email:req.body.email})
+    if (user) {
+        pass = bcrypt.compareSync(req.body.password , user.password);
+
+        if(pass){
+            payload={
+                _id : user._id,
+                email : user.email,
+                name : user.name
+
+            }
+            token = jwt.sign(payload , '5562')
+            res.status(200).send({token :token})
+
+        }else{
+            res.status(401).send('email or password invalid !')
+        }
+
+    } else {
+        res.status(404).send('email or password invalid !')
+    }
+})
 
 //get all users 
 router.get('/getAllUsers',async(request , response)=>{
