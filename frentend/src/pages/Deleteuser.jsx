@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import BackButtom from '../components/BackButton';
+import BackButton from '../components/BackButton';
 import Spinner from '../components/Spinner';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -15,7 +15,7 @@ const Deleteuser = () => {
   const handleDeleteUser = () => {
     setLoading(true);
     axios
-      .delete(`http://localhost:5555/deletebyid/${id}`)
+      .delete(`http://localhost:3000/deletebyid/${id}`)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('User Deleted successfully', { variant: 'success' });

@@ -1,21 +1,28 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Admin from '../components/Admin';
-import Edituser from './Edituser';
-import Adduser from './Adduser';
-import Deleteuser from './Deleteuser';
-import ShowUsers from './ShowUsers';
+// import React from 'react';
+// import { Router ,Routes, Route ,Outlet } from 'react-router-dom';
+// import Admin from '../components/Admin';
+// import Edituser from './Edituser';
+// import Adduser from './Adduser';
+// import Deleteuser from './Deleteuser';
+// import ShowUsers from './ShowUsers';
 
-const Adminpage = () => {
-  return (
-    <Routes>
-      <Route path='/' element={<Admin />} />
-      <Route path='/users/create' element={<Adduser />} />
-      <Route path='/users/details/:id' element={<ShowUsers />} />
-      <Route path='/users/edit/:id' element={<Edituser />} />
-      <Route path='/users/delete/:id' element={<Deleteuser />} />
-    </Routes>
-  )
-}
 
-export default Adminpage
+// const Adminpage = () => {
+//   return (
+//     <div>
+      
+//     <Routes>
+//         <Route path='/Admin' element={<Admin />} />
+//         <Route path='/Admin/create' element={<Adduser />} />
+//         <Route path='/Admin/details/:id' element={<ShowUsers />} />
+//         <Route path='/Admin/edit/:id' element={<Edituser />} />
+//         <Route path='/delete/:id' element={<Deleteuser />} />
+
+        
+//     </Routes>
+//     <Outlet /> 
+//     </div>
+//   )
+// }
+
+// export default Adminpage

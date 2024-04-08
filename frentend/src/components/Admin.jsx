@@ -11,7 +11,7 @@ import Usercard from "./modal/usercard";
 const Admin = () => {
   const [user, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [showType, setShowType] = useState('table');
+  const [showType, setShowType] = useState("table");
 
   useEffect(() => {
     setLoading(true);
@@ -27,8 +27,8 @@ const Admin = () => {
       });
   }, []);
   return (
-    <div className='p-4'>
-      <div className='flex justify-center items-center gap-x-4'>
+    <div className="p-4">
+      <div className="flex justify-center items-center gap-x-4">
         {/* <button
           className='bg-sky-300 hover:bg-sky-600 px-4 py-1 rounded-lg'
           onClick={() => setShowType('table')}
@@ -42,19 +42,13 @@ const Admin = () => {
           Card
         </button> */}
       </div>
-      <div className='flex justify-between items-center'>
-        <h1 className='text-3xl my-8'>Users List</h1>
-        <Link to='/'>
-          <MdOutlineAddBox className='text-sky-800 text-4xl' />
+      <div className="flex justify-between items-center">
+        <h1 className="text-3xl my-8">Users List</h1>
+        <Link to="create">
+          <MdOutlineAddBox className="text-sky-800 text-4xl" />
         </Link>
       </div>
-      {loading ? (
-        <Spinner />
-      ) : showType === 'table' ? (
-        <Usertable user={user} />
-      ) : (
-        <Usercard user={user} />
-      )}
+      {loading ? <Spinner /> : <Usertable user={user} />}
     </div>
   );
 };

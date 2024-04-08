@@ -52,17 +52,21 @@ router.post('/login',async(req ,res)=>{
     user = await User.findOne({email:req.body.email})
     if (user) {
         pass = bcrypt.compareSync(req.body.password , user.password);
-
+        
         if(pass){
             payload={
                 _id : user._id,
                 email : user.email,
-                name : user.name
+                name : user.name,
+                lastname : user.lastname,
+                admin : user.admin,
+                paid : user.paid,
 
             }
             token = jwt.sign(payload , '5562')
-            res.status(200).send({token :token})
-
+            // res.status(200).json({token :token})
+            res.status(200).send(user)
+            
         }else{
             res.status(401).send('email or password invalid !')
         }

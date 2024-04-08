@@ -21,11 +21,11 @@ const Adduser = () => {
     };
     setLoading(true);
     axios
-      .post("http://localhost:5555/users", data)
+      .post("http://localhost:3000/users/register", data)
       .then(() => {
         setLoading(false);
-        enqueueSnackbar("Book Created successfully", { variant: "success" });
-        navigate("/");
+        enqueueSnackbar("user Created successfully", { variant: "success" });
+        navigate("/Admin");
       })
       .catch((error) => {
         setLoading(false);

@@ -3,10 +3,12 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import "./Connecter.css";
 
+
+
 const Connecter = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const [valide, setValide] = useState(true);
   const [errorMsg, setErrorMsg] = useState("");
 
   const navigate = useNavigate();
@@ -34,12 +36,20 @@ const Connecter = () => {
 
     // }
     try {
-      const response = await axios.post("http://localhost:3000/login", {
+      const response = await axios.post("http://localhost:3000/users/login", {
         email,
         password,
       })
+      
+      if(response.data.admin){
+        console.log(response.data);
+        navigate("/Admin");
+      }else
+      navigate(`/Profile/${response.data.id}`);
+    
+      console.log(response.data);
     } catch (error) {
-      alert("somthing went wrong!!!!!")
+      alert("vérifiez votre email ou mot de passe")
       console.log(error);
     }
   };
