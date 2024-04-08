@@ -29,7 +29,8 @@ const App = () => {
           <Route path="/Admin/details/:id" element={<ShowUsers />} />
           <Route path="Admin/edit/:id" element={<Edituser />} />
           <Route path="Admin/delete/:id" element={<Deleteuser />} />
-
+          <Route></Route>
+          <Route></Route>
           <Route path="Profile/:id" element={<Profile />} />
         </Routes>
                 
