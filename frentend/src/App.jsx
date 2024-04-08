@@ -32,7 +32,7 @@ const App = () => {
 
           <Route path="Profile/:id" element={<Profile />} />
         </Routes>
-        
+                
       </BrowserRouter>
     </div>
   );
