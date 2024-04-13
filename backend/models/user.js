@@ -34,6 +34,7 @@ const User = mongoose.model('User', {
     url:{
         type:String,
         //required:true,
+        default:"",
     },
     subscriber: {
         type : Boolean,
@@ -55,11 +56,7 @@ const User = mongoose.model('User', {
         //required:true,
         default:false
     },
-    paid:{
-        type:Boolean,
-        //required:true,
-        default:false,
-    }
+    
     
 })
 

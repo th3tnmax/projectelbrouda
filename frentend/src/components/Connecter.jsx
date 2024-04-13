@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import React, { useState,useEffect } from "react";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import "./Connecter.css";
 
@@ -10,49 +10,75 @@ const Connecter = () => {
   const [password, setPassword] = useState("");
   const [valide, setValide] = useState(true);
   const [errorMsg, setErrorMsg] = useState("");
-
+  
   const navigate = useNavigate();
+
 
 
   const handleGoogleClick = () => {};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // if(valide===true){
-    //   const response = await axios.post('http://localhost:8000/login', { email, password }).catch(error => {
-    //     console.error(error);
-    //     setErrorMsg("vérifiez votre email ou mot de passe");
-    //     const span = document.getElementById('error');
-    //     span.removeAttribute('hidden');
-    //   });
-    //   console.log(response.data); // This should log the authenticated user object
-    // if(response.data !==null){
-    //   localStorage.setItem("id", JSON.stringify(response.data.id));
-    //   if(response.data.admin){
-    //     navigate("/admin");
-    //   }else
-    //   navigate(`/profile/${response.data.id}`);
-    // }
+   
+    
 
-    // }
     try {
       const response = await axios.post("http://localhost:3000/users/login", {
         email,
         password,
-      })
-      
-      if(response.data.admin){
-        console.log(response.data);
+      });
+  
+      if (response.status !== 200) {
+        throw new Error("Invalid response from server");
+      }
+  
+      const userData = response.data;
+  
+      if (userData.admin) {
+        console.log(userData);
         navigate("/Admin");
-      }else
-      navigate(`/Profile/${response.data.id}`);
-    
-      console.log(response.data);
+      } else {
+        // console.log(userData._id);
+        navigate(`/Profile/${userData._id}`);
+      }
+  
+      // Store user data in session storage
+      sessionStorage.setItem("userData", JSON.stringify(userData));
+      const userId = userData._id;
+      console.log(userId);
     } catch (error) {
-      alert("vérifiez votre email ou mot de passe")
-      console.log(error);
+      if (error.response && error.response.status === 401) {
+        alert("Vérifiez votre email ou mot de passe");
+      } else {
+        alert("Une erreur s'est produite lors de la connexion");
+      }
+      console.error("Login error:", error);
     }
+
+
+    //anothger methode 
+
+    // try {
+    //   const response = await axios.post("http://localhost:3000/users/login", {
+    //     email,
+    //   password,
+    //   })
+    //   localStorage.setItem("_id", JSON.stringify(response.data._id));
+    //   if(response.data.admin){
+    //     console.log(response.data);
+    //     navigate("/Admin");
+    //   }else
+      
+    //   console.log(response.data._id);
+    //   navigate(`/Profile/${response.data._id}`);
+    //   console.log(response.data);
+    // } catch (error) {
+    //   alert("vérifiez votre email ou mot de passe")
+    //   console.log(error);
+    // }
   };
+
+
 
   const handleEmailChange = (event) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // regular expression to match alphabetic characters only

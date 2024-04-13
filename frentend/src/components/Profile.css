@@ -1,0 +1,198 @@
+.profile-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profile-header div input {
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+
+}
+
+.profile-header div input:focus {
+    outline: none;
+}
+
+.profile-header div {
+    display: flex;
+    width: 18%;
+}
+
+.profile-logo {
+    width: 33%;
+    height: auto;
+}
+.profile-search{
+    width: 5%;
+    height: auto;
+}
+.profile-picture {
+    width: 65px;
+    height: 65px;
+    border: solid royalblue;
+    border-radius: 50px;
+
+}
+
+.profile-body {
+    background: #F8F9FB;
+
+    display: grid;
+    height: 1000px;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100%;
+}
+
+.profile-aside {
+    margin-left: 5%;
+    margin-right: 5%;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    height: fit-content;
+    grid-row: span 1;
+    flex-direction: column;
+
+
+}
+
+#profile-param {
+    padding-left: 10%;
+}
+
+
+#profile-cours-clicked {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding-left: 3%;
+    color: white;
+    background: linear-gradient(180deg, #23C5E5 0%, #1C409B 100%);
+
+}
+
+.profile-aside hr {
+    padding: 0;
+    margin: 0;
+}
+
+.profile-aside p {
+    cursor: pointer;
+
+    padding: 3%;
+    color: #27292D;
+
+
+    margin: 0;
+
+}
+
+.profile-hr {
+    width: 80%;
+    align-self: center;
+
+}
+
+.profile-cours-grid-container {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 5%;
+}
+
+.img-cours-grat {
+    width: 100%;
+    height: auto;
+
+}
+
+.cours-name {
+    padding: 1%;
+    width: 40%;
+    background-color: #c9f6ff;
+    display: flex;
+    border-radius: 6%;
+
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.cours-name p {
+    margin: 0;
+    color: #6E7A87
+}
+
+
+
+.profile-password h2 {
+
+    margin-left: 2%;
+
+}
+
+.profile-password {
+    color: #27292D;
+    background: white;
+    width: 80%;
+    border-radius: 20px;
+    height: 30%;
+    border: 1px solid #DFDFDF
+}
+
+.profile-password form div {
+    display: flex;
+    
+    gap: 9%;
+    align-items: center;
+}
+
+.profile-password form div div {
+    display: flex;
+    margin-left: 2%;
+    flex-direction: column;
+
+}
+
+.profile-password form div div label span {
+    color: red;
+}
+
+.profile-password form div div input {
+    margin-top: 2%;
+    background: #C4C4C4;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+
+
+}
+
+.profile-password form div div input:focus {
+    outline: none;
+}
+
+.profile-password form div div input:placeholder-shown {
+    color: #27292D;
+
+    opacity: 0.6;
+}
+.porifle-password-btn{
+    background: linear-gradient(180deg, #23C5E5 0%, #1C409B 100%);
+color:white;
+border-radius: 5px;
+border: none;
+padding: 0.8%;
+margin-left: 70%;
+margin-top: 9%;
+
+}
+.logOut-button{
+    padding: 1%;
+    background: linear-gradient(180deg, #23C5E5 0%, #1C409B 100%);
+    border: none;
+    color: white;
+    border-radius: 10px;
+   cursor: pointer;
+
+}
